@@ -63,7 +63,6 @@ import axios from "axios"
     async created() {
       const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?maxResults=40&q=${this.keyword}`);
       this.books = response.data.items;
-      console.log(this.books);
     } 
   }
 </script>
