@@ -1,17 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <router-link to="/" class="title"><span>BOOK SEARCH</span></router-link>
-      </div>
-      <v-spacer></v-spacer>
-      <v-btn to="/" text>HOME</v-btn>
-    </v-app-bar>
-
+    <Header/>
     <v-main>
       <router-view/>
     </v-main>
@@ -19,18 +8,10 @@
 </template>
 
 <script>
+import Header from "./components/Header";
 export default {
-  name: 'App',
-
-  data: () => ({
-    //
-  }),
+  components: {
+    Header
+  },
 };
 </script>
-<style scoped>
-.title {
-  cursor: pointer;
-  text-decoration: none;
-  color: white;
-}
-</style>
